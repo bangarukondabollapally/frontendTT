@@ -17,7 +17,7 @@ function Login(){
         try {
             await axios.post("http://localhost:8080/employee/login" , loginUser);
             alert("Login Success!");
-            navigate("/home");
+            navigate("/dashboard");
         }catch(err){
             alert("Login Failed!");
         }
@@ -29,7 +29,8 @@ function Login(){
             <input type="password" name="password" placeholder="Enter your password" onChange={handleChange}/>
             <button onClick={submit}>Login</button>
             <p>
-                <a href="/register">New User?</a>
+                Don't have an Account? <br />
+                <a href="/register">Register</a>
             </p>
         </>
     );
