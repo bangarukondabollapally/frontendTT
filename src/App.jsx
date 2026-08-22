@@ -1,10 +1,17 @@
-import Employee from "./Employee";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./Login";
+import Register from "./Register";
+import Dashboard from "./Dashboard";
 
 function App(){
     return(
-        <div>
-            <Employee/>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/login" element={<Login/>} />                
+                <Route path="/register" element={<Register/>} />           
+                <Route path="/home" element={<Dashboard/>} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 export default App;
